@@ -1,0 +1,8 @@
+---
+
+name: Cowsay with docker
+on: 
+    push:
+        branches:
+            - lavache
+            
