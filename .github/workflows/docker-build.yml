@@ -16,9 +16,9 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Parametrage QEMU # (QUick EMulation )
-        uses: docker/setup-qemu-action@v3
+      # -
+        # name: Parametrage QEMU # (QUick EMulation )
+        # uses: docker/setup-qemu-action@v3
       -
         name: Parametrage Docker Buildx
         uses: docker/setup-buildx-action@v3
