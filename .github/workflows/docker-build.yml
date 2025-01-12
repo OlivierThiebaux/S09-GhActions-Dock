@@ -14,8 +14,8 @@ jobs:
         name: connection à Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${( secrets.DOCKERHUB_USERNAME )}
+          password: ${( secrets.DOCKERHUB_TOKEN )}
       -
          name: Parametrage QEMU # (QUick EMulation )
          uses: docker/setup-qemu-action@v3
@@ -27,4 +27,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: user/essai:latest
+          tags: user/app:latest
