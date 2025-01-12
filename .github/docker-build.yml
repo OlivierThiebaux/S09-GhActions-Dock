@@ -5,8 +5,6 @@ name: Construire une image docker
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
 
 jobs:
   docker:
@@ -19,7 +17,7 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Parametrage QEMU # (QUick EMulation)
+        name: Parametrage QEMU # (QUick EMulation )
         uses: docker/setup-qemu-action@v3
       -
         name: Parametrage Docker Buildx
