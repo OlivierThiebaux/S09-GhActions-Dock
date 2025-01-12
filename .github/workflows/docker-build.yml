@@ -26,6 +26,5 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: "{{defaultContext}}:mysubdir"
           push: true
-          tags: user/app:latest
+          tags: user/app:1
